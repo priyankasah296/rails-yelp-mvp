@@ -18,6 +18,11 @@ puts "Creating restaurants"
   )
   puts "Restaurant with id: #{restaurant.id} has been created"
 
+  review = Review.create(
+    restaurant_id: restaurant.id,
+    rating: rand(0..5),
+    content: Faker::Restaurant.review
+  )
 end
 
 puts "Finished!"
